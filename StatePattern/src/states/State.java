@@ -5,18 +5,13 @@ import context.GumballMachine;
 /**
  * Abstract State
  */
-public abstract class State {
-  private GumballMachine gumballMachine;
+public interface State {
 
-  public State(final GumballMachine gumballMachine) {
-    this.gumballMachine = gumballMachine;
-  }
+  public void insertQuater();
 
-  public abstract void insertQuater();
+  public void ejectQuater();
 
-  public abstract void ejectQuater();
+  public void turnCrank();
 
-  public abstract void turnCrank();
-
-  public abstract void dispense();
+  public void dispense();
 }

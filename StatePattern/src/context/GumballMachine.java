@@ -1,5 +1,6 @@
 package context;
 
+import states.NoQuaterState;
 import states.State;
 
 /**
@@ -7,12 +8,13 @@ import states.State;
  */
 public class GumballMachine {
   private static final String NAME = "Mighty Gumball Machin Inc";
+  private static final int DEFAULT_GUMBALL_FULL = 20;
   private int gumball_cnt;
   private State state;
 
-  public GumballMachine(final State state) {
-    this.state = state;
-    gumball_cnt = 0;
+  public GumballMachine() {
+    this.state = new NoQuaterState(this);
+    gumball_cnt = DEFAULT_GUMBALL_FULL;
   }
 
   /**
@@ -23,7 +25,7 @@ public class GumballMachine {
   /**
    * Action of ejecting the inserted quater
    */
-  public void ejectQuarter() {}
+  public void ejectQuater() {}
 
   /**
    * Action of turning crank
@@ -46,7 +48,7 @@ public class GumballMachine {
    * @return true if the machine is not empty
    */
   public boolean hasGumball() {
-    return gumball_cnt == 0;
+    return gumball_cnt != 0;
   }
 
   public State getState() {
@@ -55,6 +57,10 @@ public class GumballMachine {
 
   public void setState(final State state) {
     this.state = state;
+  }
+
+  public int getCnt() {
+    return gumball_cnt;
   }
 
   @Override
