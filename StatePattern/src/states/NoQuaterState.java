@@ -1,6 +1,7 @@
 package states;
 
 import context.GumballMachine;
+import exceptions.InvalidActionForStateException;
 
 /**
  * Reactions by no quarter state to actions
@@ -16,21 +17,21 @@ public class NoQuaterState implements State {
 
   @Override
   public void insertQuater() {
-
+    gumballMachine.setState(gumballMachine.HAS_QUATER);
   }
 
   @Override
   public void ejectQuater() {
-
+    throw new InvalidActionForStateException("No quater inserted.");
   }
 
   @Override
   public void turnCrank() {
-
+    throw new InvalidActionForStateException("No quater inserted.");
   }
 
   @Override
-  public void dispense() {
-
+  public int dispense() {
+    throw new InvalidActionForStateException("No quater inserted.");
   }
 }

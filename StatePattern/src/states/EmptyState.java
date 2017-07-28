@@ -1,6 +1,7 @@
 package states;
 
 import context.GumballMachine;
+import exceptions.InvalidActionForStateException;
 
 /**
  * Reactions by empty state to actions
@@ -16,21 +17,21 @@ public class EmptyState implements State {
 
   @Override
   public void insertQuater() {
-
+    throw new InvalidActionForStateException("Out of gumball.");
   }
 
   @Override
   public void ejectQuater() {
-
+    throw new InvalidActionForStateException("Out of gumball.");
   }
 
   @Override
   public void turnCrank() {
-
+    throw new InvalidActionForStateException("Out of gumball.");
   }
 
   @Override
-  public void dispense() {
-
+  public int dispense() {
+    throw new InvalidActionForStateException("Out of gumball.");
   }
 }

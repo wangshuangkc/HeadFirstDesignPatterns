@@ -1,17 +1,15 @@
 package states;
 
-import context.GumballMachine;
-
 /**
  * Abstract State
  */
 public interface State {
 
-  public void insertQuater();
+  void insertQuater();
 
-  public void ejectQuater();
+  void ejectQuater();
 
-  public void turnCrank();
+  void turnCrank();
 
-  public void dispense();
+  int dispense();
 }

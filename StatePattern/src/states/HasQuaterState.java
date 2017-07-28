@@ -1,6 +1,9 @@
 package states;
 
 import context.GumballMachine;
+import exceptions.InvalidActionForStateException;
+
+import java.util.Random;
 
 /**
  * Reactions by has-quarter state to actions
@@ -16,21 +19,26 @@ public class HasQuaterState implements State {
 
   @Override
   public void insertQuater() {
-
+    throw new InvalidActionForStateException("Quater has been inserted.");
   }
 
   @Override
   public void ejectQuater() {
-
+    gumballMachine.setState(gumballMachine.NO_QUATER);
   }
 
   @Override
   public void turnCrank() {
-
+    final Random winner_gennerator = new Random(gumballMachine.WINNER_BASE);
+    if (winner_gennerator.nextInt() == 0) {
+      gumballMachine.setState(gumballMachine.WINNER);
+    } else {
+      gumballMachine.setState(gumballMachine.SOLD);
+    }
   }
 
   @Override
-  public void dispense() {
-
+  public int dispense() {
+    throw new InvalidActionForStateException("Cannot dispense before turn crank");
   }
 }
