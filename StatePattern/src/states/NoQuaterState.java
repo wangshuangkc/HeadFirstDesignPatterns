@@ -22,16 +22,17 @@ public class NoQuaterState implements State {
 
   @Override
   public void ejectQuater() {
-    throw new InvalidActionForStateException("No quater inserted.");
+    System.out.println("No quater inserted.");
   }
 
   @Override
   public void turnCrank() {
-    throw new InvalidActionForStateException("No quater inserted.");
+    System.out.println("No quater inserted.");
   }
 
   @Override
   public int dispense() {
-    throw new InvalidActionForStateException("No quater inserted.");
+    System.out.println("No quater inserted.");
+    return 0;
   }
 }

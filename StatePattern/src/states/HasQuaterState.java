@@ -19,7 +19,7 @@ public class HasQuaterState implements State {
 
   @Override
   public void insertQuater() {
-    throw new InvalidActionForStateException("Quater has been inserted.");
+    System.out.println("Quater has been inserted.");
   }
 
   @Override
@@ -29,8 +29,8 @@ public class HasQuaterState implements State {
 
   @Override
   public void turnCrank() {
-    final Random winner_gennerator = new Random(gumballMachine.WINNER_BASE);
-    if (winner_gennerator.nextInt() == 0) {
+    final Random winner_gennerator = new Random();
+    if (winner_gennerator.nextInt(gumballMachine.WINNER_BASE) == 0) {
       gumballMachine.setState(gumballMachine.WINNER);
     } else {
       gumballMachine.setState(gumballMachine.SOLD);
@@ -39,6 +39,7 @@ public class HasQuaterState implements State {
 
   @Override
   public int dispense() {
-    throw new InvalidActionForStateException("Cannot dispense before turn crank");
+    System.out.println("Cannot dispense before turn crank");
+    return 0;
   }
 }

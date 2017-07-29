@@ -17,7 +17,8 @@ public class WinnerState extends SoldState {
 
   @Override
   public int dispense() {
-    if (gumballMachine.getCnt() > 2) {
+    System.out.println("You got an extra gumball!");
+    if (gumballMachine.getCnt() > 1) {
       gumballMachine.setState(gumballMachine.NO_QUATER);
     } else {
       gumballMachine.setState(gumballMachine.EMPTY);

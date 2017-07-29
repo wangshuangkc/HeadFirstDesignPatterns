@@ -17,21 +17,22 @@ public class EmptyState implements State {
 
   @Override
   public void insertQuater() {
-    throw new InvalidActionForStateException("Out of gumball.");
+    System.out.println("Out of gumball.");
   }
 
   @Override
   public void ejectQuater() {
-    throw new InvalidActionForStateException("Out of gumball.");
+    System.out.println("Out of gumball.");
   }
 
   @Override
   public void turnCrank() {
-    throw new InvalidActionForStateException("Out of gumball.");
+    System.out.println("Out of gumball.");
   }
 
   @Override
   public int dispense() {
-    throw new InvalidActionForStateException("Out of gumball.");
+    System.out.println("Out of gumball.");
+    return 0;
   }
 }

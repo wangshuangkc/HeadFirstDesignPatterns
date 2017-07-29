@@ -17,17 +17,17 @@ public class SoldState implements State {
 
   @Override
   public void insertQuater() {
-    throw new InvalidActionForStateException("Quater has been inserted.");
+    System.out.println("Quater has been inserted.");
   }
 
   @Override
   public void ejectQuater() {
-    throw new InvalidActionForStateException("Cannot eject quater after turn crank.");
+    System.out.println("Cannot eject quater after turn crank.");
   }
 
   @Override
   public void turnCrank() {
-    throw new InvalidActionForStateException("Crank has been turned.");
+    System.out.println("Crank has been turned.");
   }
 
   @Override
