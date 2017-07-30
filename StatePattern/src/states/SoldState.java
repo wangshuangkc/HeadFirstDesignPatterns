@@ -40,4 +40,9 @@ public class SoldState implements State {
 
     return 1;
   }
+
+  @Override
+  public String toString() {
+    return "A gumball is coming out...";
+  }
 }

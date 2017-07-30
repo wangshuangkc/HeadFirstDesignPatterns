@@ -42,4 +42,9 @@ public class HasQuaterState implements State {
     System.out.println("Cannot dispense before turn crank");
     return 0;
   }
+
+  @Override
+  public String toString() {
+    return "A quater is inserted, waiting for turning...";
+  }
 }

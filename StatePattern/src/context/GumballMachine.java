@@ -44,18 +44,17 @@ public class GumballMachine {
   }
 
   /**
-   * Action of turning crank
+   * Action of turning crank and release the ball
    */
   public void turnCrank() {
     state.turnCrank();
+    dispense();
   }
 
-  /**
-   * Action of dispense the gumball
-   */
-  public void dispense() {
+  private void dispense() {
     final int dispensed_cnt = state.dispense();
     gumball_cnt -= dispensed_cnt;
+    System.out.println("A ball is rolling out.");
   }
 
   /**
@@ -88,6 +87,7 @@ public class GumballMachine {
   @Override
   public String toString(){
     return NAME + "\n"
-        + "Gumball left: " + gumball_cnt;
+        + "Gumball left: " + gumball_cnt + "\n"
+        + "State: " + getState();
   }
 }

@@ -35,4 +35,9 @@ public class NoQuaterState implements State {
     System.out.println("No quater inserted.");
     return 0;
   }
+
+  @Override
+  public String toString() {
+    return "Waiting for inserting a quater...";
+  }
 }

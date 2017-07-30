@@ -26,4 +26,9 @@ public class WinnerState extends SoldState {
 
     return 2;
   }
+
+  @Override
+  public String toString() {
+    return "A gumball is coming out with a bonus ball";
+  }
 }
