@@ -16,7 +16,6 @@ public class GumBallMachineApp {
     while (times > 0) {
       gumballMachine.insertQuater();
       gumballMachine.turnCrank();
-      gumballMachine.dispense();
       System.out.println(gumballMachine);
       times--;
     }
@@ -26,7 +25,6 @@ public class GumBallMachineApp {
     gumballMachine.insertQuater();
     gumballMachine.ejectQuater();
     gumballMachine.turnCrank();
-    gumballMachine.dispense();
     System.out.println(gumballMachine);
     System.out.println();
 
@@ -34,14 +32,12 @@ public class GumBallMachineApp {
     gumballMachine.insertQuater();
     gumballMachine.turnCrank();
     gumballMachine.ejectQuater();
-    gumballMachine.dispense();
     System.out.println(gumballMachine);
     System.out.println();
 
     System.out.println("Test eject-turncrank-dispense");
     gumballMachine.ejectQuater();
     gumballMachine.turnCrank();
-    gumballMachine.dispense();
     System.out.println(gumballMachine);
     System.out.println();
 
@@ -49,12 +45,10 @@ public class GumBallMachineApp {
     while (gumballMachine.getCnt() > 0) {
       gumballMachine.insertQuater();
       gumballMachine.turnCrank();
-      gumballMachine.dispense();
     }
     gumballMachine.insertQuater();
     gumballMachine.turnCrank();
     gumballMachine.ejectQuater();
-    gumballMachine.dispense();
     System.out.println(gumballMachine);
     System.out.println();
 
