@@ -12,7 +12,7 @@ public abstract class Duck {
   private QuackBehavior quackBehavior;
 
   public void swim() {
-    System.out.println("Swim...");
+    System.out.println("Swimming...");
   }
 
   public void performFly() {
