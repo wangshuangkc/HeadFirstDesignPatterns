@@ -1,7 +1,6 @@
 **As a** <type of user>,
-**I want to** <task>,
+**I need** <task>,
 **So that** <goal>.
 
 **Acceptance Criteria**
 
-**Definition of Done**
