@@ -6,25 +6,29 @@ public class StatisticsDisplay implements Listener, Display {
   private Subject weatherData;
   private double min;
   private double max;
-  private double avg;
+  private int numReadings;
+  private double tempSum;
 
   public StatisticsDisplay(final Subject subject) {
     min = Double.MAX_VALUE;
     max = Double.MIN_VALUE;
+    numReadings = 0;
+    tempSum = 0;
     weatherData = subject;
     weatherData.addListener(this);
   }
   @Override
   public void display() {
     System.out.println("AVG/MAX/MIN temperature: " +
-        avg + "/" + max + "/" + min + "˚F");
+        tempSum / numReadings + "/" + max + "/" + min + "˚F");
   }
 
   @Override
   public void update(double temperature, double humidity, double pressure) {
     min = Math.min(min, temperature);
     max = Math.max(max, temperature);
-    avg = (max - min) / 2 + min;
+    tempSum += temperature;
+    numReadings++;
 
     display();
   }

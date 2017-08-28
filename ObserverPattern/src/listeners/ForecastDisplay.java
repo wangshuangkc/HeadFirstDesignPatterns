@@ -10,7 +10,7 @@ public class ForecastDisplay implements Listener, Display {
   private static final double DEFAULT_PRESSURE = 29.5;
 
   public ForecastDisplay(final Subject subject) {
-    lastPressure = DEFAULT_PRESSURE;
+    currentPressure = DEFAULT_PRESSURE;
     weatherData = subject;
     weatherData.addListener(this);
   }
