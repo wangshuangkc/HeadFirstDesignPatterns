@@ -1,7 +1,6 @@
 package apps;
 
 import listeners.*;
-import subject.Subject;
 import subject.WeatherData;
 
 public class WeatherStation {
