@@ -7,8 +7,13 @@ public class Decaf extends Beverage {
   private static final String DESCRIPTION = "Decaf Coffee";
   private static final double COST = 1.05;
 
-  public Decaf() {
-    this.description = DESCRIPTION;
-    this.cost = COST;
+  @Override
+  public String getDescription() {
+    return DESCRIPTION;
+  }
+
+  @Override
+  public double getCost() {
+    return COST;
   }
 }

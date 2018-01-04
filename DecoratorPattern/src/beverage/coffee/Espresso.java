@@ -7,8 +7,13 @@ public class Espresso extends Beverage {
   private static final String DESCRIPTION = "Espresso Coffee";
   private static final double COST = 1.99;
 
-  public Espresso() {
-    this.description = DESCRIPTION;
-    this.cost = COST;
+  @Override
+  public String getDescription() {
+    return DESCRIPTION;
+  }
+
+  @Override
+  public double getCost() {
+    return COST;
   }
 }
