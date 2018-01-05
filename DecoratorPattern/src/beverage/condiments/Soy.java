@@ -13,6 +13,14 @@ public class Soy extends Condiment {
   public Soy(Beverage beverage, Size size) {
     this.beverage = beverage;
     this.size = size;
+
+    tallCost = TALL_COST;
+    granteCost = GRANTE_COST;
+    ventiCost = VENTI_COST;
+  }
+
+  public Soy(Beverage beverage) {
+    new Soy(beverage, Size.GRANTE);
   }
 
   @Override
@@ -22,11 +30,6 @@ public class Soy extends Condiment {
 
   @Override
   public double getCost() {
-    switch (size) {
-      case TALL: return TALL_COST;
-      case GRANTE: return GRANTE_COST;
-      case VENTI: return VENTI_COST;
-      default: return GRANTE_COST;
-    }
+    return getCondimentCost(size) + beverage.getCost();
   }
 }
