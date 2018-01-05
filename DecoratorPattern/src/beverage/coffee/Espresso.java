@@ -7,9 +7,8 @@ public class Espresso extends Beverage {
   private static final String DESCRIPTION = "Espresso Coffee";
   private static final double COST = 1.99;
 
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
+  public Espresso() {
+    description = DESCRIPTION;
   }
 
   @Override

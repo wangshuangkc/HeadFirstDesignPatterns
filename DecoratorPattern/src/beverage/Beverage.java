@@ -6,12 +6,15 @@ package beverage;
 public abstract class Beverage {
 
   protected Size size;
+  protected String description = "Beverage";
 
   /**
    * Get the description of the beverage
    * @return descriptions String
    */
-  public abstract String getDescription();
+  public String getDescription() {
+    return description;
+  }
 
   /**
    * Get the cost of the beverage

@@ -7,9 +7,8 @@ public class Decaf extends Beverage {
   private static final String DESCRIPTION = "Decaf Coffee";
   private static final double COST = 1.05;
 
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
+  public Decaf() {
+    description = DESCRIPTION;
   }
 
   @Override
