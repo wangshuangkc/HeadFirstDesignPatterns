@@ -31,5 +31,5 @@ Attach additional responsibilities to an object dynamicly. Decorators privode a 
 Allow an object to alter its behavior when its internal state changes.
 The object will appear to change its class.
 
-**Chapter 11. [Controlling Object Access](./ProxyPattern)**<br>
+**Chapter 11. [Proxy Pattern](./ProxyPattern)**<br>
 Provide a surrogate or placeholder for another object to control access to it.
