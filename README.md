@@ -12,7 +12,8 @@ Java codes for Head First Design Patterns
 * Favor composition over inheritance
 * Program to interfaces, not implementations
 * Strive for loosely coupled designs between objects that interact
-* Classes should be open for extension but closed for modification.
+* Classes should be open for extension but closed for modification
+* Depend on abstractions, do not depend on concrete classes
 
 ## OO Patterns
 
@@ -26,6 +27,10 @@ so that when on object changes state, all its dependents are notified and update
 
 **Chapter 3. [Decorator Pattern](./DecoratorPattern/src)**<br>
 Attach additional responsibilities to an object dynamicly. Decorators privode a flexible alternative to subclassing for extending functionality.
+
+**Chapter 4. [Factory Pattern](./FactoryPattern/src)**<br>
+Abstract Factory provides an interface for creating families of related or dependent objects without specifying their concrete classes. <br>
+Factory Method defines an interface for creating an object, but let subclasses to decide which class to initializ; lets a class defer initialization to the subclasses.
 
 **Chapter 10. [State Pattern](./StatePattern/src)**<br>
 Allow an object to alter its behavior when its internal state changes.
