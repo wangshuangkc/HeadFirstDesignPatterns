@@ -11,7 +11,7 @@ public abstract class PizzaStore {
   protected PizzaIngredientFactory pizzaIngredientFactory;
   protected Region region;
 
-  public Pizza createPizza(Item item) {
+  private Pizza createPizza(Item item) {
     pizza = PizzaFactory.createPizza(item, pizzaIngredientFactory);
     pizza.setName(region.toString() + " " + pizza.getName());
 
@@ -22,6 +22,8 @@ public abstract class PizzaStore {
     pizza = createPizza(item);
 
     pizza.prepare();
+    System.out.println("Prepare " + pizza.toString());
+
     pizza.bake();
     pizza.cut();
     pizza.box();

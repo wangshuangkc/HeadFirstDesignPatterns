@@ -19,6 +19,6 @@ public class CheesePizza extends Pizza {
 
   @Override
   public String toString() {
-    return String.format("%d\n%d, %d, %d", name, dough.getDough(), sauce.getSauce(), cheese.getCheese());
+    return String.format("%s\n%s, %s, %s", name, dough.getDough(), sauce.getSauce(), cheese.getCheese());
   }
 }

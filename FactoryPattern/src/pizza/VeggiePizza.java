@@ -25,7 +25,7 @@ public class VeggiePizza extends Pizza {
   @Override
   public String toString() {
     List<String> veggieNames = veggies.stream().map(Veggie::getVeggie).collect(Collectors.toList());
-    return String.format("%d\n%d, %d, %d\n%d",
+    return String.format("%s\n%s, %s, %s\n%s",
         name,
         dough.getDough(), sauce.getSauce(), cheese.getCheese(),
         String.join(", ", veggieNames));

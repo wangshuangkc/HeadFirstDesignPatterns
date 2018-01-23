@@ -20,7 +20,7 @@ public class ClamsPizza extends Pizza {
 
   @Override
   public String toString() {
-    return String.format("%d\n%d, %d, %d\n%d",
+    return String.format("%s\n%s, %s, %s\n%s",
         name,
         dough.getDough(), sauce.getSauce(), cheese.getCheese(),
         clams.getClam());
