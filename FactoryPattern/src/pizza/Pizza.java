@@ -36,6 +36,10 @@ public abstract class Pizza {
     return name;
   }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+
   @Override
   public abstract String toString();
 }

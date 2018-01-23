@@ -11,11 +11,17 @@ import ingredients.pepperoni.SlicedPepperoni;
 import ingredients.sauce.PlumTomatoSauce;
 import ingredients.sauce.Sauce;
 import ingredients.veggie.*;
+import types.Region;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
+
+  @Override
+  public Region getRegion() {
+    return Region.CHICAGO;
+  }
 
   @Override
   public Dough createDough() {

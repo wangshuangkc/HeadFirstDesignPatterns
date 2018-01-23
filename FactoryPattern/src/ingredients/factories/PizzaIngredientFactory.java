@@ -6,10 +6,13 @@ import ingredients.dough.Dough;
 import ingredients.pepperoni.Pepperoni;
 import ingredients.sauce.Sauce;
 import ingredients.veggie.Veggie;
+import types.Region;
 
 import java.util.List;
 
 public interface PizzaIngredientFactory {
+
+  public Region getRegion();
   public Dough createDough();
   public Sauce createSauce();
   public Clams createClams();

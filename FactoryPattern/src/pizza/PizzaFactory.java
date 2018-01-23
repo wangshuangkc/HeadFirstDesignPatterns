@@ -4,7 +4,7 @@ import ingredients.factories.PizzaIngredientFactory;
 import types.Item;
 
 public class PizzaFactory {
-  public Pizza createPizza(Item item, PizzaIngredientFactory pizzaIngredientFactory) {
+  public static Pizza createPizza(Item item, PizzaIngredientFactory pizzaIngredientFactory) {
     switch(item) {
       case CHEESE: return new CheesePizza(pizzaIngredientFactory);
       case CLAMS: return new ClamsPizza(pizzaIngredientFactory);
