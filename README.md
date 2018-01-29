@@ -32,6 +32,9 @@ Attach additional responsibilities to an object dynamicly. Decorators privode a 
 Abstract Factory provides an interface for creating families of related or dependent objects without specifying their concrete classes. <br>
 Factory Method defines an interface for creating an object, but let subclasses to decide which class to initializ; lets a class defer initialization to the subclasses.
 
+**Chapter 5. [Singleton Pattern](./SingletonPattern/src)**<br>
+Ensure a classs only have one instance and provide a global point to it.
+
 **Chapter 10. [State Pattern](./StatePattern/src)**<br>
 Allow an object to alter its behavior when its internal state changes.
 The object will appear to change its class.
