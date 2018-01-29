@@ -1,6 +1,5 @@
 package boilderstates;
 
-import exceptions.InvalidActionForStateException;
 import singleton.ChocolateBoiler;
 
 public class BoilerBoiledState implements BoilerState{
@@ -13,7 +12,7 @@ public class BoilerBoiledState implements BoilerState{
 
   @Override
   public void fill() {
-    throw new InvalidActionForStateException("The chocolate boiler is already filled and boiled.");
+    System.out.println("The chocolate boiler is already filled and boiled.");
   }
 
   @Override
@@ -24,6 +23,6 @@ public class BoilerBoiledState implements BoilerState{
 
   @Override
   public void boil() {
-    throw new InvalidActionForStateException("The chocolate boiler is already boiled.");
+    System.out.println("The chocolate boiler is already boiled.");
   }
 }

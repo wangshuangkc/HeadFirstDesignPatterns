@@ -1,6 +1,5 @@
 package boilderstates;
 
-import exceptions.InvalidActionForStateException;
 import singleton.ChocolateBoiler;
 
 public class BoilerEmptyState implements BoilerState{
@@ -19,11 +18,11 @@ public class BoilerEmptyState implements BoilerState{
 
   @Override
   public void drain() {
-    throw new InvalidActionForStateException("Invalid to drain empty chocolate boiler.");
+    System.out.println("The chocolate boiler is empty to drain.");
   }
 
   @Override
   public void boil() {
-    throw new InvalidActionForStateException("Invalid to boil empty chocolate boiler.");
+    System.out.println("The chocolate boiler is empty to boil.");
   }
 }

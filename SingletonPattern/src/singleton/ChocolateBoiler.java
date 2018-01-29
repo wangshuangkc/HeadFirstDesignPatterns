@@ -5,7 +5,7 @@ import boilderstates.BoilerState;
 
 public class ChocolateBoiler {
   private volatile static ChocolateBoiler chocolateBoiler;
-  private BoilerState state;
+  private volatile BoilerState state;
 
   private ChocolateBoiler() {
     state = new BoilerEmptyState(this);
@@ -23,15 +23,16 @@ public class ChocolateBoiler {
     return chocolateBoiler;
   }
 
-  public void fill() {
+  //Todo why synchronized is required with volatile variables if multithread starts together
+  public synchronized void fill() {
     state.fill();
   }
 
-  public void drain() {
+  public synchronized void drain() {
     state.drain();
   }
 
-  public void boil() {
+  public synchronized void boil() {
     state.boil();
   }
 
