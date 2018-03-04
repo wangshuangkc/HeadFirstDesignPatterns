@@ -35,6 +35,9 @@ Factory Method defines an interface for creating an object, but let subclasses t
 **Chapter 5. [Singleton Pattern](./SingletonPattern/src)**<br>
 Ensure a classs only have one instance and provide a global point to it.
 
+**Chapter 6. [Command Pattern](./CommandPattern/src)**<br>
+Encapsulate a request as an object, thereby letting you parametrize clients with different requests, queue or log requests, and support undoable operations.
+
 **Chapter 10. [State Pattern](./StatePattern/src)**<br>
 Allow an object to alter its behavior when its internal state changes.
 The object will appear to change its class.
